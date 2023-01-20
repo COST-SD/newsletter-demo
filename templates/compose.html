@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="{{ url_for('static', filename ='css/home.css')}}" rel="stylesheet" />
+    <style>
+      body{
+    background-color: #ffffff;
+    margin: 1.5rem;
+}
+    </style>
+    <title>Compose</title>
+</head>
+<body>
+  <form style=" display: inline-block" action="/logout" method="post">
+    <button taget="_blank" class="logout" type="submit">Logout</button>
+  </form>
+  <form style=" display: inline-block" action="/contents" method="get">
+    <button taget="_blank" class="logout" type="submit">Contents</button>
+  </form>
+    <h1>Compose</h1>
+    
+    <form class="" action="/compose" method="post">
+      <div class="form-group">
+
+        <!-- <div class="form-floating">
+             <input
+                type="text"
+                name="name"
+                class="form-control top"
+                placeholder="Name"
+                required autofocus
+              />
+           <label for="floatingInput">Name</label>
+        </div> -->
+        
+     </div>
+        <label>ID</label>
+        <input class="form-control" type="text" name="userId">
+        <label>Title</label>
+        <input class="form-control" type="text" name="postTitle">
+        <label>Post</label>
+        <textarea class="form-control" name="postBody" rows="5" cols="30"></textarea>
+      </div>
+      <button class="btn btn-primary" type="submit" name="button">Publish</button>
+    </form>
+   
+</body>
+</html>
