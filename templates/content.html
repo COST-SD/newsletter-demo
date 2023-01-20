@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <link href="{{ url_for('static', filename ='css/home.css')}}" rel="stylesheet" />
+    <title>Content</title>
+</head>
+<body>
+    <form style=" display: inline-block" action="/logout" method="post">
+        <button taget="_blank" class="logout" type="submit">Logout</button>
+    </form>
+    <center><div class="content">
+        {% if posts|length < 1 %}
+        <h4 style="text-align: center">There are no Content4>
+        {% else %}
+        <h1>User Details</h1>
+        <table>
+            <tr>
+                <th>User</th>
+                <th>Email</th>
+                <th>Title</th>
+                <th>Post</th>
+            </tr>
+            {% for post in posts %}
+                <tr>
+                    <td>{{ post.username }}</td>
+                    <td>{{ post.email }}</td>
+                    <td>{{ post.post_title }}</td>
+                    <td>{{ post.post_content }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+    </div></center>
+</body>
+</html>
