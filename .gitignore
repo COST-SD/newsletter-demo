@@ -1,0 +1,7 @@
+env
+user.db
+templates/compose.html
+templates/content.html
+templates/update.html
+static/css/update.css
+upload_img/
